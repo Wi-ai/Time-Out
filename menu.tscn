@@ -1,0 +1,284 @@
+[gd_scene format=3 uid="uid://cja35lvmcwldx"]
+
+[ext_resource type="Script" uid="uid://wip0tahy7q6m" path="res://Scripts/menu.gd" id="1_158mb"]
+[ext_resource type="Texture2D" uid="uid://cj5ls6fvtv2lg" path="res://Assets/new-platformer-pack-1.0/Sprites/Backgrounds/Default/background_clouds.png" id="2_wwsa2"]
+[ext_resource type="FontFile" uid="uid://bjl3l3glndx14" path="res://Assets/kenney_kenney-fonts/Fonts/Kenney Future.ttf" id="3_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://dri4axg1x65vc" path="res://Assets/Clock/New Piskel.png" id="4_wbdvm"]
+[ext_resource type="Texture2D" uid="uid://chsmv5c6fycl3" path="res://Assets/ui_9patchrect.png" id="5_q3rjx"]
+[ext_resource type="FontFile" uid="uid://dt0ivqqwxdgjy" path="res://Assets/kenney_kenney-fonts/Fonts/Kenney High Square.ttf" id="6_6swd7"]
+[ext_resource type="Texture2D" uid="uid://dtupy2ilgn1pc" path="res://Assets/toon-characters-1/Male adventurer/PNG/Poses HD/character_maleAdventurer_jump.png" id="7_7qvly"]
+[ext_resource type="Texture2D" uid="uid://dhj716kab3s1g" path="res://Assets/toon-characters-1/Male adventurer/Tilesheet/character_maleAdventurer_sheetHD.png" id="8_rfqti"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3rjx"]
+texture = ExtResource("2_wwsa2")
+modulate_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
+bg_color = Color(0.5977206, 0.6899529, 0.6335126, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qvly"]
+bg_color = Color(0.4299857, 0.69321585, 0.54753566, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfqti"]
+bg_color = Color(0.33706287, 0.61988443, 0.3864149, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8i7c"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23t3j"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ph6h"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ti5v"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1by5w"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmwmt"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc6uw"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dldpb"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d77ms"]
+atlas = ExtResource("4_wbdvm")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3p34a"]
+animations = [{
+"frames": [{
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_g8i7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23t3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ph6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ti5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1by5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmwmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc6uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dldpb")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_d77ms")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p34a"]
+atlas = ExtResource("8_rfqti")
+region = Rect2(1152, 512, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owyel"]
+atlas = ExtResource("8_rfqti")
+region = Rect2(1344, 512, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h63v2"]
+atlas = ExtResource("8_rfqti")
+region = Rect2(1536, 512, 192, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6llh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p34a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owyel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h63v2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Menu" type="Control" unique_id=796053620]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_158mb")
+
+[node name="Panel" type="Panel" parent="." unique_id=1225385017]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q3rjx")
+
+[node name="Button" type="Button" parent="." unique_id=1290902193]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -31.5
+offset_right = 125.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.000113828486, 0.000113827875, 0.000113828006, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6swd7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7qvly")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rfqti")
+text = "Start Game"
+
+[node name="GameTitle" type="Label" parent="." unique_id=1814195773]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.27600002
+anchor_right = 0.5
+anchor_bottom = 0.27600002
+offset_left = -204.0
+offset_top = -49.848022
+offset_right = 204.0
+offset_bottom = 30.151978
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.017732391, 0.017732391, 0.01773239, 1)
+theme_override_colors/font_shadow_color = Color(0.2627451, 0.6392157, 0.30588236, 0.9098039)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_jsrd8")
+theme_override_font_sizes/font_size = 70
+text = "Time out"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameTitle" unique_id=62893402]
+position = Vector2(439, 42)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_3p34a")
+autoplay = "default"
+
+[node name="Instructions" type="Node" parent="." unique_id=878450367]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Instructions" unique_id=1976278932]
+offset_left = 107.0
+offset_top = 381.0
+offset_right = 426.0
+offset_bottom = 581.0
+texture = ExtResource("5_q3rjx")
+region_rect = Rect2(0, 0, 48, 48)
+
+[node name="HowToJump" type="Label" parent="Instructions" unique_id=1483213555]
+anchors_preset = -1
+anchor_left = 0.094000004
+anchor_top = 0.66
+anchor_right = 0.094000004
+anchor_bottom = 0.66
+offset_left = 29.711998
+offset_top = -17.680023
+offset_right = 245.712
+offset_bottom = 18.319977
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_colors/font_shadow_color = Color(0.3372549, 0.6117647, 0.27450982, 0.8784314)
+theme_override_fonts/font = ExtResource("6_6swd7")
+theme_override_font_sizes/font_size = 40
+text = "- Space to jump."
+
+[node name="Sprite2D" type="Sprite2D" parent="Instructions/HowToJump" unique_id=1482115797]
+position = Vector2(225, 12)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_7qvly")
+
+[node name="HowToMoveLeft" type="Label" parent="Instructions" unique_id=239538752]
+anchors_preset = -1
+anchor_left = 0.094000004
+anchor_top = 0.66
+anchor_right = 0.094000004
+anchor_bottom = 0.66
+offset_left = 31.711998
+offset_top = 41.319977
+offset_right = 247.712
+offset_bottom = 77.31998
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_colors/font_shadow_color = Color(0.3372549, 0.6117647, 0.27450982, 0.8784314)
+theme_override_fonts/font = ExtResource("6_6swd7")
+theme_override_font_sizes/font_size = 40
+text = "- A To Move Left."
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Instructions/HowToMoveLeft" unique_id=818735920]
+position = Vector2(229, 10.999999)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_l6llh")
+autoplay = "default"
+flip_h = true
+
+[node name="HowToMoveLeft2" type="Label" parent="Instructions" unique_id=1129164256]
+anchors_preset = -1
+anchor_left = 0.094000004
+anchor_top = 0.66
+anchor_right = 0.094000004
+anchor_bottom = 0.66
+offset_left = 31.711998
+offset_top = 94.31998
+offset_right = 247.712
+offset_bottom = 130.31998
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_colors/font_shadow_color = Color(0.3372549, 0.6117647, 0.27450982, 0.8784314)
+theme_override_fonts/font = ExtResource("6_6swd7")
+theme_override_font_sizes/font_size = 40
+text = "- D To Move Right."
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Instructions/HowToMoveLeft2" unique_id=1815553539]
+position = Vector2(229, 10.999999)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_l6llh")
+autoplay = "default"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

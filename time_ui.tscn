@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://gaiqax7gybmg"]
+
+[ext_resource type="Script" uid="uid://bihlntprxcgwr" path="res://Scripts/time_ui.gd" id="1_j15nj"]
+[ext_resource type="Texture2D" uid="uid://chsmv5c6fycl3" path="res://Assets/ui_9patchrect.png" id="1_ul3sl"]
+[ext_resource type="LabelSettings" uid="uid://cio6l5o3dvjtc" path="res://Assets/kenney_kenney-fonts/time_font.tres" id="2_dw8ib"]
+[ext_resource type="Texture2D" uid="uid://q44x26q066tb" path="res://Assets/Clock/New Piskel (1).png" id="3_dw8ib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j15nj"]
+atlas = ExtResource("3_dw8ib")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hg37"]
+atlas = ExtResource("3_dw8ib")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7nvk"]
+atlas = ExtResource("3_dw8ib")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tsfa"]
+atlas = ExtResource("3_dw8ib")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcq0o"]
+atlas = ExtResource("3_dw8ib")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0vfg"]
+animations = [{
+"frames": [{
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_j15nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hg37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7nvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tsfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcq0o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="TimeUI" type="Control" unique_id=1451795712]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 66.0
+offset_bottom = 18.0
+scale = Vector2(2, 2)
+script = ExtResource("1_j15nj")
+
+[node name="Background" type="NinePatchRect" parent="." unique_id=13144951]
+layout_mode = 0
+offset_right = 77.5
+offset_bottom = 18.5
+texture = ExtResource("1_ul3sl")
+region_rect = Rect2(47.777786, 0, 48.435905, 15.872387)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="Clock" type="Control" parent="." unique_id=72662786]
+anchors_preset = 0
+offset_right = 78.0
+offset_bottom = 18.0
+
+[node name="Minutes" type="Label" parent="Clock" unique_id=1728248299]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -4.0
+offset_right = 46.0
+offset_bottom = 20.0
+text = "05"
+label_settings = ExtResource("2_dw8ib")
+metadata/_edit_lock_ = true
+
+[node name="Space" type="Label" parent="Clock" unique_id=16488488]
+layout_mode = 0
+offset_left = 46.5
+offset_top = -4.0
+offset_right = 50.5
+offset_bottom = 20.0
+text = ":"
+label_settings = ExtResource("2_dw8ib")
+metadata/_edit_lock_ = true
+
+[node name="Seconds" type="Label" parent="Clock" unique_id=697890312]
+layout_mode = 0
+offset_left = 51.5
+offset_top = -4.0
+offset_right = 75.5
+offset_bottom = 20.0
+text = "05"
+label_settings = ExtResource("2_dw8ib")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Clock" unique_id=2038387709]
+position = Vector2(11, 9)
+sprite_frames = SubResource("SpriteFrames_v0vfg")
+autoplay = "default"
+metadata/_edit_lock_ = true

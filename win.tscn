@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cy3vuc6ieiy2h"]
+
+[ext_resource type="Texture2D" uid="uid://cle70vbkgsphs" path="res://Assets/new-platformer-pack-1.0/Sprites/Backgrounds/Default/background_fade_trees.png" id="1_3mm25"]
+[ext_resource type="Script" uid="uid://mcgpnhnw8bll" path="res://Scripts/win.gd" id="1_611cj"]
+[ext_resource type="FontFile" uid="uid://da6f3aefcnoxe" path="res://Assets/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="2_611cj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1l0l"]
+texture = ExtResource("1_3mm25")
+modulate_color = Color(0.973535, 0.9735351, 0.973535, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xxyo"]
+bg_color = Color(0.5977206, 0.6899529, 0.6335126, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru4ub"]
+bg_color = Color(0.605067, 0.90824133, 0.9006766, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_liiam"]
+bg_color = Color(0.70477694, 0.40119687, 0.5466029, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="You Win" type="Control" unique_id=1161577500]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_611cj")
+
+[node name="Panel" type="Panel" parent="." unique_id=1138130932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g1l0l")
+
+[node name="Button" type="Button" parent="." unique_id=1518849787]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -34.0
+offset_right = 92.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0018410755, 0.0018410654, 0.0018410676, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_3xxyo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ru4ub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_liiam")
+text = "Next round"
+
+[node name="Label" type="Label" parent="." unique_id=1526572927]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.316
+anchor_right = 0.5
+anchor_bottom = 0.316
+offset_left = -158.0
+offset_top = -57.768005
+offset_right = 151.0
+offset_bottom = 49.231995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.008758295, 0.0050485986, 0.0015661679, 1)
+theme_override_fonts/font = ExtResource("2_611cj")
+theme_override_font_sizes/font_size = 120
+text = "YOU WIN "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
